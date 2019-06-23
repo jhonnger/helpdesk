@@ -1,0 +1,178 @@
+Bienvenido a PHD Help Desk 2.12
+*******************************
+
+PHD Help Desk es un completo sistema de registro y seguimiento de incidentes para su Mesa de Ayuda, Service Desk o área de atención a Clientes. Desarrollado en PHP y MySQL se instala en la mayoría de las configuraciones de servidores de la actualidad, pudiendo el cliente acceder desde un navegador web, independizando a la aplicación del sistema operativo. Su plantilla de configuración de idioma le permite no solo el cambio de lenguaje de la interfaz de usuario si no también la adaptación de PHD Help Desk a otras tareas de registro y seguimiento de eventos, CRM, etc.
+
+
+INSTALACION
+***********
+- Requerimientos.
+
+Apache+PHP+MySQL.
+
+- Archivos.
+
+Al descomprimir el archivo phd_2_12.zip debe quedar la siguiente distribución de directorios:
+
+/phd_2_12/: Contiene los archivos .php, .css, .gif y .ico de PHD Help Desk.
+
+/phd_2_12/images/: íconos e imágenes del sistema
+
+/phd_2_12/include/: Son los archivos 'includes' de la aplicación.
+
+/phd_2_12/upload/: Carpeta de trabajo de la función de carga de usuarios y áreas.
+
+/phd_2_12/setup/eng/: Contiene los archivos necesarios para la configuración inicial de PHD Help Desk, los formularios están en idioma inglés.
+
+/phd_2_12/setup/esp/: Contiene los archivos necesarios para la configuración inicial de PHD Help Desk, los formularios están en idioma español.
+
+/phd_2_12/secureimage/: archivos de la clase PHP para la generación de captchas.
+
+
+Configuración inicial de PHD Help Desk 2.12.
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Para efectuar la configuración inicial de PHD debe acceder con su navegador a http://(su servidor)/phd_2_12/setup/esp/ , allí podrá:
+
+    * Especificar el lenguaje de las pantallas de PHD Help Desk, español o inglés
+    * Configurar los parámetros de acceso a la base de datos como ser, nombre del host, base de datos, usuario y contraseña de acceso.
+    * Configurar los parámetros del servidor de correo electrónico.		
+    * Configurar los parámetros generales de uso del sistema.
+    * Crear las tablas en la base de datos.
+    * Dar de alta al operador con permisos de administrador del sistema.
+    * Dar de alta los atributos del caso de mesa de ayuda.
+
+Lea y siga atentamente las instrucciones de cada paso.
+
+
+ATENCION USUARIOS DE VERSIONES ANTERIOR DE PHD HELP DESK.
+*********************************************************
+
+Los archivos actuales corresponden a una nueva instalación, NO sobre escriba su actual instalación ya que perderá la información que haya configurado en el archivo lang.inc.
+
+Si desea actualizar su versión PHD 2.05 a 2.12 descargue update_to_phd_2_12.zip 
+
+
+NOVEDADES EN PHD HELP DESK 2.12
+********************************
+
+Estos son los cambios que hemos realizado en la nueva versión:
+
+- No es más necesario configurar la variable include_path del archivo php.ini. Ahora hay una variable, $Include, que viene inicializada desde la instalación en el archivo config.inc.php, el que quiera setear en su entorno include_path debe hacerlo blanqueando esta variable. 
+- El  archivo de configuración phd.inc pasa a llamarse config.inc.php y funcionesPHP.inc ahora es funciones.inc.php, ambos estan en la carpeta raíz.
+- Se actualizó la librería de envío de correo electrónico a PHPMailer 5.1
+- Corrección de BUG #34: cuando se ingresa un ticket con un estado de alerta llamaba a un programa que no existe.
+- Se agrega transaccionalidad.
+- Nuevo archivo con el log de errores del envío de correo electrónico.
+- Se reemplazan las funciones obsoletas ereg y split
+- Loader de Areas y Usuarios. 
+- Consulta de novedades. 
+- Se agrega un parámetro para hacer obligatorio asignar a algún operador el ticket.
+
+Si desea recibir las novedades de PHD Help Desk regístrese en http://www.p-hd.com.ar/registro.php
+
+Ingrese a nuestro foro en http://www.p-hd.com.ar/foro.php
+
+Allí podrá:
+
+    * Realizar consultas acerca de la instalación y configuración.
+    * Solicitar soporte, realizar consultas sobre funcionalidades.
+    * Sugerir mejoras a la aplicación.
+    * Contactarse con otros usuarios de PHD Help Desk.
+    * Reportar bugs.
+    * Etc., etc., etc.
+
+
+Gracias por elegir PHD Help Desk.
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+
+Welcome to PHD HELP DESK 2.12
+*****************************
+
+PHD is a complete incident registry and tracking system for your Help Desk, Service Desk or Customer service area. 
+Developed with PHP and MySQL technology, it is possible to install in most server configurations, using practically any web browser client, with operating system independence. The language configuration page allows not only the change of user interface language, but also the registry and follow up of events, CRM, etc. 
+
+
+TO INSTALL PHD HELP DESK
+************************
+
+- Requirements.
+
+Apache+PHP+MySQL.
+
+- Files.
+
+When decompressing, phd_2_12.zip must be left in the following distribution directories :
+
+/phd_2_12/: Contains the files .php, .css, .gif and .ico of PHD Help desk.
+
+/phd_2_12/images/: icons and system images.
+
+/phd_2_12/include/: These are the 'includes' files of the aplication.
+
+/phd_2_12/upload/: Work folder of the users and areas loader.
+
+/phd_2_12/setup/eng/: Contains the necessary files for the initial configuration of the data base. The forms are in English.
+
+/phd_2_12/setup/esp/: Contains the necessary files for the initial configuration of the data base. The forms are in Spanish.
+
+/phd_2_12/secureimage/: PHP class files for the captchas generation.
+
+
+
+Initial configuration of PHD Help Desk 2.12
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+In order to carry out the initial configuration of PHD, browse to http://{your server}/phd_2_12/setup/eng/. Tasks to be completed:
+
+    * Specify the language of the PHD screens (English or Spanish).
+    * Specify the access parameters to the data base (hostname, database name, username and password).
+    * Specify the e-mail server parameters	
+    * Configure the general system parameters.
+    * Create the tables in the database.
+    * Add the operator account with "System Administrator" level.
+    * Insert the attributes of the help desk ticket.
+
+Read and follow the instructions for each step.
+
+
+WARNING FOR USERS OF PREVIOUS VERSIONS OF PHD HELP DESK
+*******************************************************
+
+The present files correspond to a new installation. DO NOT overwrite your present installation, because you will loss the information stored in lang.inc file.
+
+If you wish to update from PHD 2.05 to 2.12, download the update_to_phd_2_12.zip file.
+
+
+PHD HELP DESK 2.12 NEWS
+************************
+These are the changes made in the new version:
+
+- Now you don't need configure the include_path variable in the php.ini file. The variable $Include is inicialized in the installation proccess in the config.inc.php file, if you wish to set the include_path environment you must empty this variable with a blanc. 
+- The configuration file phd.inc is named config.inc.php and the funcionesPHP.inc file now is funciones.inc.php, both are in the root file.
+- It is updated the e-mail send library to PHPMailer 5.1
+- BUG #34 corrected: when input a ticket with alert state was called a no exists program.
+- Add transactioanlity.
+- New log file with e-mail send errors.
+- Replace the deprecated functions ereg y split
+- Areas and users loader. 
+- News report. 
+- New parameter to set mandatory assign the ticket to an operator.
+
+
+You can download the installation and user manual at http://www.p-hd.com.ar/eng/.
+If you wish to receive announcements of new features in PHD Help Desk, suscribe in http://www.p-hd.com.ar/eng/registro.php
+
+Go to our forum at http://www.p-hd.com.ar/foro.php
+There you can:
+
+    * Do consultations about installation or configuration.
+    * Ask for support, do consultations about use and functionalities.
+    * Suggest improvements or new features.
+    * Contact with others PHD Help Desk users.
+    * Report bugs.
+    * Etc., etc., etc.
+
+Thanks for choosing PHD Help Desk.

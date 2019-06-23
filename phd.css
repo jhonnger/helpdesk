@@ -1,0 +1,347 @@
+/*
+    Nombre: phd.css
+    Autor: Julio Tuozzo jtuozzo@p-hd.com.ar
+    Función: hoja de estilo
+    Function: style sheet
+    Ver: 2.12
+*/
+
+
+body
+    {background: white;
+     font-family: Arial, Helvetica, sans-serif;
+     font-size: 12px;
+     color:navy;
+    }
+
+font, table, form {
+    font-family: Arial, Helvetica, sans-serif;
+	font-size:12px;
+    }
+
+input, select, textarea {
+    font-family: Arial, Helvetica, sans-serif;
+	font-size:12px;
+	background:#FFFFD5;
+    border: 1px silver solid;
+    }
+    
+th {
+	background:#B7B7E6;
+	text-align:left;
+    }
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-top: 1px solid black;
+    }
+
+/* Clases de botones */
+
+.boton_guardar
+{   padding-right:4px;
+    height: 22px;
+	width: 22px;
+	font-weight:bold;
+	color:navy;
+    text-align:right;
+	background: #CACFFF url(./images/guardar.gif) no-repeat left;
+	cursor:pointer
+}
+
+.boton_buscar
+{   padding-right:4px;
+    height: 22px;
+	width: 22px;
+	font-weight:bold;
+	color:navy;
+    text-align:right;
+	background: #CACFFF url(./images/buscar.gif) no-repeat left;
+	cursor:pointer
+}
+
+.boton_lupa
+{   padding-right:4px;
+    height: 22px;
+	width: 22px;
+    border: 0;
+	background: url(./images/buscar.gif) no-repeat left;
+	cursor:pointer
+}
+
+
+.boton_salir
+{   padding-right:4px;
+    height: 22px;
+	width: 22px;
+	font-weight:bold;
+	color:navy;
+    text-align:right;
+	background: #CACFFF url(./images/salir.gif) no-repeat left;
+	cursor:pointer
+}
+
+
+.boton_filtrar
+{   padding-right:4px;
+    height: 22px;
+	width: 22px;
+	font-weight:bold;
+	color:navy;
+    text-align:right;
+	background: #CACFFF url(./images/filtrar.gif) no-repeat left;
+	cursor:pointer
+}
+
+.boton_cancelar
+{   padding-right:4px;
+    height: 22px;
+	width: 22px;
+	font-weight:bold;
+	color:navy;
+    text-align:right;
+	background: #CACFFF url(./images/cancelar.gif) no-repeat left;
+	cursor:pointer
+}
+
+.boton_eliminar
+{   padding-right:4px;
+    height: 22px;
+	width: 22px;
+	font-weight:bold;
+	color:navy;
+    text-align:right;
+	background: #CACFFF url(./images/eliminar.png) no-repeat left;
+	cursor:pointer
+}
+
+.boton_editar
+{   padding-right:4px;
+    height: 22px;
+	width: 22px;
+	font-weight:bold;
+	color:navy;
+    text-align:right;
+	background: #CACFFF url(./images/editar.gif) no-repeat left;
+	cursor:pointer
+}
+
+/* Fin clases de botones */
+
+
+.caja {padding:5px;
+       border-style:solid;
+       border-width:1px;
+       line-height:2.1;
+      }
+
+.b_linea_1 {background:#E3E3F4;}
+
+.b_linea_2 {background:#EDECFF;}
+
+.boton
+    { background: #CACFFF;
+      color:navy;
+      font-weight:bold;
+    }
+
+.error
+    { text-align:center;
+      color: red;
+      font-weight:bold;
+    }
+
+.caja_texto {
+    border: 1px solid black;
+    background:#EDECFF;
+  }
+
+h1 {
+     font-size:22px;
+    }
+
+h2 {
+     font-size:18px;
+    }
+
+h3 {
+     font-size:14px;
+    }
+
+h4 {
+     font-size:12px;
+    }
+
+h5 {
+     font-size:10px;
+    }
+    
+h1, h2, h3, h4, h5 {
+    font-family: Arial, Helvetica, sans-serif;
+    color:navy;
+    margin:1px;
+    padding:1px;
+    }
+
+
+.boton_bold
+    { background: #CACFFF;
+      color:navy;
+      font-weight:bold;
+    }
+
+.borde_fino {
+    border: 1px solid black;
+    padding:10px;
+    }
+
+
+h3.menu a {
+    text-decoration: none;
+    color:navy;
+    margin:1px;
+    padding:1px;
+    }
+
+h3.menu a:hover {
+    color: gray;
+}
+
+h4.menu a {
+    text-decoration: none;
+    color:navy;
+    margin:1px;
+    padding:1px;
+    }
+
+h4.menu a:hover {
+    color: gray;
+}
+
+
+td.p_1{
+    text-align:center;
+    background-color: #00EE0A;
+  }
+  
+td.p_2{
+    text-align:center;
+    background-color: #AEEE00;
+  }
+  
+td.p_3{
+    text-align:center;
+    background-color: #FAFF00;
+  }
+
+td.p_4{
+    text-align:center;
+    background-color: #FAAE00;
+  }
+
+td.p_5{
+    text-align:center;
+    background-color: #FA0E00;
+  }
+
+.consulta {
+    background-color: #EDECFF;
+    border: 1px solid black;
+    font-weight: bold;
+    color:navy;
+    padding:6px;
+    }
+
+.resalto {font-weight:bold;
+          font-style:italic;
+          background:yellow;
+        }
+
+div#login
+    { text-align:center;
+      padding: 10px;
+      background: #E3E3F4;
+      border: 1px solid navy;
+      width: 300px;
+      margin: 0 auto;
+    }
+    
+#encabezado
+    {font-weight:bold;
+     font-size:14px;
+    }
+
+#encabezado img
+    {padding: 0px 10px 0px 0px;
+  }
+
+#contenido
+    {position: absolute;
+     top: 70px;
+     left: 10px;
+     right: 10px;
+     z-index:900;
+    }
+    
+/* Estilo del menú */
+
+div#menu
+    {background: #0000AE;
+     position:absolute;
+     top: 40px;
+     float: left;
+     width: 99%;
+     z-index:990;
+    }
+
+div#menu ul
+    {list-style-type:none;
+     padding:0;
+     margin:0;
+     }
+
+div#menu li
+    {float:left;
+     list-style-type:none;
+    }
+
+div#menu a
+    {display:block;
+     text-decoration:none;
+     font-weight:bold;
+     margin-top:0;
+     padding: 4px 12px;
+     background: #0000AE;
+     color: yellow;
+    }
+
+div#menu a:hover
+    {color: white;
+     background: gray;
+    }
+
+div#menu ul li ul
+    {margin:0;
+     padding:0;
+     position:absolute;
+     width:140px;
+    }
+
+div#menu ul li ul li
+    {width:100%;
+     border-bottom:1px solid gray;
+    }
+
+body div#menu ul li ul
+    {display:none;
+    }
+
+div#menu ul li:hover ul, div#menu ul li ul:hover
+    {display:block;
+    }
+
+/* Fin estilo del menú  */
+
+

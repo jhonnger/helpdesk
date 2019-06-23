@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="ISO-8859-1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="title" content="ScoopThemes">
+    <meta name="ROBOTS" content="AgromarIndustrial">
+    <meta name="description" content="">
+    <meta name="abstract" content="">
+   
+    <meta name="author" content="www.fyfserviciosweb.com">
+    <meta name="publisher" content="www.fyfserviciosweb.com">
+    <meta name="copyright" content="www.fyfserviciosweb.com">
+    <link rel="shortcut icon" href="assets/img/favicon.png">
+    <title>Agromar Industrial</title>
+    <!-- Bootstrap -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-theme.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/animations.css">
+
+    <!-- siimple style -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.validate.js"></script>
+</head>
+
+<body>
+
+<a href='/upload/SQLManagementStudio_x64_ESN.exe'>file</a>
+    <div id="wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                    <img src="assets/img/ai.png" alt="Scoop Themes Logo" width="350px" height="150px">
+                    <br/>
+                    <br/>
+                    <h2 class="subtitle">Estamos trabajando, muy pronto estaremos listos.</h2>
+                    <br/>
+
+                    <div id="Formulario">
+                        <form name="frmSubmit" id="frmSubmit" method="post" target="hideFrame" class="form-inline validate signup">
+                            <div class="form-group">
+                                <input type="text" name="name" id="name" required="required" class="form-control" placeholder="Ingrese su opinión">
+                                <input type="number" name="phone" id="phone" required="required" class="form-control numericos" placeholder="Teléfono" min="0" max="999999999" maxlength="9">
+                                <input type="email" name="email" id="email" required="required" class="form-control" placeholder="Correo electrónico">
+                                <textarea name="comment" id="comment" class="form-control" placeholder="Ingrese su comentario"></textarea>
+                                <input type="submit" id="btEnviar" value="ENVIAR >>" class="btn btn-theme">
+
+                            </div>
+                        </form>
+                    </div>
+                    <div id="divMessage" style="display:none; margin:0; color: #FFF;">
+                        <p><br>Gracias por contactarnos.</p>
+                        <p>En breve nos comunicaremos con usted</p>
+                    </div>
+                    <br/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-lg-offset-3">
+                    <p class="copyright">Agromar Industrial S.A., Av. Paseo de la República 3195, Ofic. 902, San Isidro<br>
+Gerente General<br>                    
+Ingrese su opinión | Cel: +51988992731 | RPM: *370928<br>
+Gerente Financiero<br>
+Ingrese su opinión | Cel: +51943995175 | RPM: #943995175<br>
+Contralor General <br>
+Ingrese su opinión | Cel: +51 996415596 | RPM: *233885<br>
+Administrador<br>
+Ingrese su opinión | Cel: +51 968156367 | RPM: *744043</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+       <script type="text/javascript">
+            $(document).ready(function(){
+
+                $('#frmSubmit').submit(function (e) {
+                    //e.preventDefault();
+                  if ($(this).valid()) {
+                    $("#Formulario").hide('slow');
+                    $('#Formulario').after('<div id="loading">PROCESANDO ENVIO...</div><iframe id="hideFrame" name="hideFrame" style="display:none"></iframe>'); //Target Post
+
+                    $('#frmSubmit').attr('action', 'ajax/form_post.php');
+                  }
+                });
+
+                $(".numericos").keydown(function(event) {
+                    if(event.shiftKey)
+                    {
+                        event.preventDefault();
+                    }
+                    
+                    if (event.keyCode == 46 || event.keyCode == 8 || event.keyCode == 9)    {
+                    }
+                    else {
+                        if (event.keyCode < 95) {
+                            if (event.keyCode < 48 || event.keyCode > 57) {
+                                event.preventDefault();
+                            }
+                        } 
+                        else {
+                            if (event.keyCode < 96 || event.keyCode > 105) {
+                                  event.preventDefault();
+                            }
+                        }
+                    }
+                });
+
+                $("#phone").bind('keypress', function(){ 
+                    if($(this).val().length>=$(this).attr('size')){ 
+                        return false;
+                    } 
+                });                                 
+                
+            });
+        </script>
+        <script type="text/javascript">
+        function getMessage(retVal, msg){
+            $("#loading").remove();
+
+            if(retVal==1){
+                    $("#loading").hide();
+                    $("#divMessage").show();
+            }else{
+                    $("#Formulario").show('fast');
+            }
+        }
+        </script>
+
+</body>
+
+</html>
